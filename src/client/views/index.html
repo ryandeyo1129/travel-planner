@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Weather Journal</title>
+</head>
+<body>
+  <div id="app">
+    <div class="header">
+      <h1>Travel Planner</h1>
+    </div>
+    <h2>What city would you like to visit?</h2>
+    <form id="searchform">
+      <input id="city" type="text" name="input" value="" placeholder="Enter city">
+      <input id="button" type="submit" name="" value="Submit">
+    </form>
+    <div id="flexcontainer">
+      <div id="datacontainer">
+        <div id="cityphoto"></div>
+        <div id="weatherdata"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+      // Use the window load event to keep the page load performant
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js');
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+body{
+  height: 100%;
+  margin: 0px;
+  background-color: #555555;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#app{
+  height: 100vh;
+  background: #555555;
+  color: #f0d43a;
+}
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+
+#searchform {
+  display: flex;
+  justify-content: center;
+}
+#flexcontainer {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0 50px 0;
+}
+#datacontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#weatherdata {
+  margin: 50px 0 0 0;
+}
+#weather {
+  display: flex;
+  justify-content: space-between;
+  // border: 5px red solid;
+  width: auto;
+  height: 50px;
+}
+
+#cityImage {
+  max-width: 800px;
+}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+
+#city {
+  width: 300px;
+}
+
+#button {
+  width: 200px;
+}
+button {
+  width: 200px;
+}
+.button:hover {
+  background: #9900ee;
+  cursor: pointer;
+}
+
+@media(min-width: 600px) {
+
+}
+
+@media(min-width: 1000px) {
+
+}
+
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+/* Style for Placeholder Text*/
+::placeholder { /* Firefox, Chrome, Opera */ 
+    color: black; 
+    font-family: 'Oswald', sans-serif;
+
+} 
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+    color: black; 
+    font-family: 'Oswald', sans-serif;
+
+} 
+  
+::-ms-input-placeholder { /* Microsoft Edge */ 
+    color: black; 
+    font-family: 'Oswald', sans-serif;
+
+} 
