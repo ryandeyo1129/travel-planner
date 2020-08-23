@@ -1,10 +1,22 @@
-# Weather-Journal App Project
+## Table of Contents
 
-## Overview
-This project requires you to create an asynchronous web app that uses Web API and user data to dynamically update the UI. 
+* [Instructions](#instructions)
+* [Description](#description)
+* [Installation](#installation)
+* [Runtime Environment](#runtimeenvironment)
 
 ## Instructions
-This will require modifying the `server.js` file and the `website/app.js` file. You can see `index.html` for element references, and once you are finished with the project steps, you can use `style.css` to style your application to customized perfection.
 
-## Extras
-If you are interested in testing your code as you go, you can use `tests.js` as a template for writing and running some basic tests for your code.
+To run tests go to terminal and type `npm run test`
+
+## Description
+
+A dynamic webpage that uses api calls to retrieve the future weather for vacation hotspots
+
+## Installation
+
+To get started, clone project locally and open files in the editor.
+
+## Runtime Environment
+
+JavaScript
