@@ -41,6 +41,16 @@ module.exports = {
         })
     ],
     devServer: {
+      // webpack-dev-server setup
+      host: 'localhost',
       port: 8080,
+      proxy: {
+          // The frontend code uses the backend to store
+          // data. webpack-dev-server fails at this. Hence
+          // redirecting frontend api requests to a different port.
+          context: () => true,
+          target: 'http://localhost:8080',
+          secure: false
+      }
     }
 }

@@ -1,5 +1,8 @@
-// Setup empty JS object to act as endpoint for all routes
-projectData = {};
+const projectData = {
+  name: 'Ryan',
+  age: 26,
+  location: 'Boston'
+};
 
 // Require Express to run server and routes
 const express = require('express');
@@ -29,20 +32,11 @@ app.use(express.static('dist'));
 
 // Setup and start server
 const port = 8081;
-
-app.listen(port, () => console.log(`listening on port ${port}`));
+const server = app.listen(port, () => console.log(`listening on port ${port}`));
 
 // setup GET route endpoint
-app.get('/all', (req, res) => {
+app.get('/person', (req, res) => {
   res.send(projectData);
 })
 
-// setup POST route endpoint
-app.post('/add', (req, res) => {
-  const newData = {
-    date: req.body.date,
-    temp: req.body.main.temp,
-    feelings: req.body.feelings
-  };
-  projectData = newData;
-})
+module.exports = server;

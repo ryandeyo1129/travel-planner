@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Weather Journal</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather Journal</title>
+  </head>
 <body>
   <div id="app">
     <div class="header">
       <h1>Travel Planner</h1>
     </div>
     <h2>What city would you like to visit?</h2>
-    <form id="searchform">
-      <input id="city" type="text" name="input" value="" placeholder="Enter city">
-      <input id="button" type="submit" name="" value="Submit">
+    <form class="searchform">
+      <div class="cityinput">
+        <span>Enter city:</span>
+        <input id="city" type="text" name="input" value="" placeholder="Enter City" required="required">
+      </div>
+      <div class="dateinput">
+        <span>Enter flight date:</span>
+        <input id="date" type="text" name="input" value="" placeholder="YYYY-MM-DD" required="required">
+      </div>
+      <button id="button" type="submit" name="" value="Submit">Get Weather</button>
     </form>
     <div id="flexcontainer">
       <div id="datacontainer">
+        <div id="cityname"></div>
         <div id="cityphoto"></div>
         <div id="weatherdata"></div>
       </div>
@@ -26,7 +35,13 @@
     if ('serviceWorker' in navigator) {
       // Use the window load event to keep the page load performant
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js');
+        navigator.serviceWorker.register('travel-planner/src/sw.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
       });
     }
   </script>
